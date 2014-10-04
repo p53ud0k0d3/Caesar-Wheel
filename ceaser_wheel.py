@@ -13,8 +13,10 @@ alpha = list(alpha)
 
 
 def main():
-    while(1 ==1):
-        print "\n\nCEASER'S CIPHER WHEEL\n\n"
+    while True:
+        print "\n\n======================"
+        print "CEASER'S CIPHER WHEEL"
+        print "======================\n\n"
         print "1.Encode\n2.Decode\n3.Exit\n"
         ch = int(raw_input("Enter your choice : "))
         if ch ==1:
