@@ -1,4 +1,4 @@
-"""ceaser_wheel.py
+"""caesar_wheel.py
 
 	Author : Vishnu Ashok 
 	Contact : thisisvishnuashok@hotmail.com
@@ -15,7 +15,7 @@ alpha = list(alpha)
 def main():
     while True:
         print "\n\n======================"
-        print "CEASER'S CIPHER WHEEL"
+        print "CAESAR'S CIPHER WHEEL"
         print "======================\n\n"
         print "1.Encode\n2.Decode\n3.Exit\n"
         ch = int(raw_input("Enter your choice : "))
