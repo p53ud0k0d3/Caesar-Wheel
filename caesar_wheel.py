@@ -1,4 +1,4 @@
-"""caesar_wheel.py
+"""Caesar_wheel.py
 
 	Author : Vishnu Ashok 
 	Contact : thisisvishnuashok@hotmail.com
@@ -6,27 +6,32 @@
 			  
 	This is a cipher that was used by Julius Caesar two thousand years ago. The good news is that it is simple and easy to learn. The bad news is that because it is so simple, it is also easy for a cryptanalyst to break it. But we can use it just as a simple learning exercise. The Caesar Cipher is also explained on Wikipedia here : 
 http://en.wikipedia.org/wiki/Caesar_cipher
+
 """
+
+# Pyperclip is a cross-platform clipboard module for Python.
+
+import pyperclip
 
 alpha = "abcdefghijklmnopqrstuvwxyz"
 alpha = list(alpha)
 
-
 def main():
-    while True:
+    ch = "0"
+    while ch not in "123":
         print "\n\n======================"
         print "CAESAR'S CIPHER WHEEL"
         print "======================\n\n"
         print "1.Encode\n2.Decode\n3.Exit\n"
-        ch = int(raw_input("Enter your choice : "))
-        if ch ==1:
+        ch = raw_input("Enter your choice : ")
+        if ch == "1":
             encode()
-        elif ch == 2:
+        elif ch == "2":
             decode()
-        elif ch == 3:
+        elif ch == "3":
             exit()
         else:
-            print "Invalid choice\n"
+            print "\n" * 3
 
 
 
@@ -49,7 +54,11 @@ def encode():
         i = i + 1
     encoded = "".join(new)
     print "Encoded message : " + encoded
-    raw_input("\nPress any key to continue")
+    print "\n1. Copy to clipboard"
+    print "Press any other key to continue"
+    ch = raw_input("> ")
+    if ch == "1":
+        pyperclip.copy(encoded)
     
 
 
@@ -72,7 +81,12 @@ def decode():
         i = i + 1
     decoded = "".join(new)
     print "Decoded message : " + decoded
-    raw_input("\nPress any key to continue")
+    print "\n1. Copy to clipboard"
+    print "Press any other key to continue"
+    ch = raw_input("> ")
+    if ch == "1":
+        pyperclip.copy(decoded)
+    
     
 if __name__ == "__main__":
     main()
